@@ -13,11 +13,10 @@ body{
 }
 
 #backgroundimages{
+  position: absolute;
   z-index: -1;
   opacity: 0.1;
-  overflow: hidden;
-  position: fixed;
-  top: 0px;
+  top: -20px;
 }
 
 #backgroundimages > img{
@@ -86,6 +85,10 @@ body{
   border-bottom: solid 1px var(--dividerblue);
   transition: border var(--buttontransition);
   cursor: pointer;
+}
+
+#root{
+
 }
 
 .section{
