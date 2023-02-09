@@ -75,12 +75,12 @@ body{
 }
 
 @keyframes navbaranimation{
-  30% {width: 600px; opacity: 0}
-  100% {width: min(1000px, 75%); opacity: 1}
+  30% {opacity: 0}
+  100% {opacity: 1}
 }
 
 #navbar{
-  width: 0px;
+  width: min(1000px, 75%);
   opacity: 0;
   margin-left: auto;
   margin-right: auto;
@@ -91,6 +91,7 @@ body{
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+  overflow: hidden;
 }
 
 #navbar > ul{
@@ -108,21 +109,14 @@ body{
   color: white;
   font-family: Helvetica;
   font-weight: bold;
-  width: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  width: 100px;
   height: 50px;
-  font-size: 20px;
   text-align: center;
+  align-items: center;
   border: none;
   border-bottom: solid 1px var(--divider);
   background: var(--buttonbackground);
   transition: border var(--buttontransition);
-}
-
-#navbar > ul > button > p{
-  position: relative;
-  bottom: 8px;
 }
 
 #navbar > ul > button:hover{
@@ -150,7 +144,7 @@ body{
   font-family: Helvetica;
   font-weight: lighter;
   font-size: 60px;
-  text-decoration: underline;
+  width: auto;
 }
 
 .section > p{
@@ -186,6 +180,8 @@ body{
   margin-top: 5px;
   font-style: italic;
   margin-bottom: 30px;
+  color: white;
+  font-weight: thin;
 }
 
 a{
