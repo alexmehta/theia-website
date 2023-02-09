@@ -198,6 +198,12 @@ a:hover{
   transition: background var(--buttontransition);
 }
 
-#contact > img{
-  opacity: 0.2;
+#creators > img{
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+
+#creators > img:hover{
+  opacity: 1;
+  transition: opacity 0.5s;
 }
