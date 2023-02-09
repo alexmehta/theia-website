@@ -1,8 +1,8 @@
 body{
-  --background-color: rgb(30,30,50);
+  --background-color: rgb(22, 22, 65);
   --divider: rgb(80,80,80);
   --dividerblue: rgb(0,119,255);
-  --dividerdarkblue: rgb(12,49,92);
+  --dividerdarkblue: rgb(0, 79, 170);
   --buttontransition: 0.3s;
   --buttonbackground: rgb(40,40,60);
   --sectionbackground: rgb(35,35,55);
@@ -29,18 +29,41 @@ body{
   margin-top: -5px;
 }
 
-#logo{
 
+#logo{
   width: min(700px, 50%);
   border-bottom: solid 1px var(--divider);
   margin: auto;
   text-align: center;
+}
+
+@keyframes logoanimationtext {
+  0% {letter-spacing: 3px;}
+  50% {letter-spacing: 4px;}
+  100% {letter-spacing: 3px;}
+}
+
+#logo > p{
+  animation-name: logoanimationtext;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes logoanimationimg{
+  10% {opacity: 0; bottom: 60px;}
+  100% {opacity: 1; bottom: 0px;}
 
 }
 
 #logo > img{
+  opacity: 0;
   width: min(70%, 700px);
   position: relative;
+  animation-name: logoanimationimg;
+  animation-duration: 0.85s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 #logo > .caption{
@@ -51,12 +74,23 @@ body{
   font-weight: lighter;
 }
 
+@keyframes navbaranimation{
+  30% {width: 600px; opacity: 0}
+  100% {width: min(1000px, 75%); opacity: 1}
+}
+
 #navbar{
-  width: min(1000px, 75%);
+  width: 0px;
+  opacity: 0;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
   height: 100px;
+  animation-name: navbaranimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 #navbar > ul{
@@ -73,14 +107,22 @@ body{
   margin-left: 0px;
   color: white;
   font-family: Helvetica;
-  width: 100px;
+  font-weight: bold;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
   height: 50px;
+  font-size: 20px;
   text-align: center;
-  align-items: center;
   border: none;
   border-bottom: solid 1px var(--divider);
   background: var(--buttonbackground);
   transition: border var(--buttontransition);
+}
+
+#navbar > ul > button > p{
+  position: relative;
+  bottom: 8px;
 }
 
 #navbar > ul > button:hover{
@@ -107,6 +149,8 @@ body{
   color: white;
   font-family: Helvetica;
   font-weight: lighter;
+  font-size: 60px;
+  text-decoration: underline;
 }
 
 .section > p{
