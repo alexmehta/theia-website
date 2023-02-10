@@ -126,6 +126,7 @@ body{
   cursor: pointer;
 }
 
+
 .section{
   width: min(1000px, 75%);
   background: var(--sectionbackground);
@@ -139,6 +140,12 @@ body{
   padding-right: 50px;
   border-radius: 10px;
   box-shadow: var(--dividerdarkblue) 0px 0px 20px 3px;
+  transition: box-shadow 1s;
+}
+
+.section:hover{
+  box-shadow: white 0px 0px 20px 3px;
+  transition: box-shadow 1s;
 }
 
 .section > h1{
