@@ -40,16 +40,16 @@ body{
 }
 
 
+@keyframes logoanimationtext {
+  0% {letter-spacing: 3px;}
+  50% {letter-spacing: 4px;}
+  100% {letter-spacing: 3px;}
+}
+
 #logo > p{
-  margin-top: -5px;
-  margin-bottom: 5px;
-  position: relative;
-  font-size: 20px;
-  animation-name: logoanimationimg;
-  animation-duration: 0.85s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-name: logoanimationtext;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes logoanimationimg{
@@ -75,6 +75,8 @@ body{
   opacity: 0.5;
   font-family: "Segoe UI";
   font-weight: lighter;
+  margin-top: -10px;
+  margin-bottom: 4px;
 }
 
 .author{
