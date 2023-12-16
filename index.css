@@ -20,6 +20,7 @@ body{
   position: fixed;
   top: 0px;
   left: 0px;
+  will-change: transform;
 }
 
 #backgroundimages > img{
@@ -38,16 +39,17 @@ body{
   text-align: center;
 }
 
-@keyframes logoanimationtext {
-  0% {letter-spacing: 3px;}
-  50% {letter-spacing: 4px;}
-  100% {letter-spacing: 3px;}
-}
 
 #logo > p{
-  animation-name: logoanimationtext;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  position: relative;
+  font-size: 20px;
+  animation-name: logoanimationimg;
+  animation-duration: 0.85s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes logoanimationimg{
@@ -75,6 +77,17 @@ body{
   font-weight: lighter;
 }
 
+.author{
+  font-style: italic;
+  color: white;
+  opacity: 0.3;
+  font-family: "Segoe UI";
+  font-weight: lighter;
+  width: 100%;
+  text-align: center;
+  margin-top: 2px;
+}
+
 @keyframes navbaranimation{
   30% {opacity: 0}
   100% {opacity: 1}
@@ -85,7 +98,7 @@ body{
   opacity: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 0px;
   height: 100px;
   animation-name: navbaranimation;
   animation-duration: 2s;
